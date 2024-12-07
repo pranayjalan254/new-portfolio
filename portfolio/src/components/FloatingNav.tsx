@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface FloatingNavProps {
   isMenuOpen: boolean;
@@ -17,7 +17,14 @@ const FloatingNav: React.FC<FloatingNavProps> = ({ isMenuOpen }) => {
         >
           <div className="absolute inset-0 bg-black/95">
             <div className="flex flex-col items-center justify-center h-full space-y-8">
-              {['About', 'Timeline', 'Skills', 'Projects', 'Contact'].map((item) => (
+              {[
+                "About",
+                "Timeline",
+                "Skills",
+                "Projects",
+                "Blog",
+                "Contact",
+              ].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}

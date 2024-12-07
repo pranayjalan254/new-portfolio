@@ -1,44 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { education } from "../data/Education";
+import { experience } from "../data/Experience";
 
 const Timeline = () => {
   const [activeTab, setActiveTab] = useState<"education" | "experience">(
     "education"
   );
-
-  const education = [
-    {
-      year: "2022-2026",
-      title: "Bachelor of Engineering in Electronics and Instrumentation",
-      institution: "BITS Pilani, Pilani Campus",
-      description:
-        "Internet Of Things, Data Structures and Algorithms, Database Management, Microprocessors, Microelectronic Circuits, Analog and Digital VLSI Design, Control Systems",
-    },
-    {
-      year: "2020-2022",
-      title: "High School",
-      institution: "Vidyanidhi Jr. College of Science",
-      description: "Science, Mathematics, Physics, Electronics",
-    },
-  ];
-
-  const experience = [
-    {
-      year: "May 2024 - July 2024",
-      title: "Full Stack Developer Intern",
-      company: "Pacify Medical Technologies Pvt Ltd",
-      description:
-        "Developed a ReactJS web app interface to process wound images and calculate burn areas, integrating a pre-trained Mask RCNN model with a Flask backend on Google Cloud.",
-    },
-    {
-      year: "May 2024 - Present",
-      title: "Design and Partnerships Lead",
-      company: "Bits Blockchain Club",
-      description:
-        "Established a website for the club which will improve the engagement and participant registrations in upcoming events",
-    },
-  ];
 
   return (
     <section

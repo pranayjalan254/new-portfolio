@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import FloatingNav from "./components/FloatingNav";
+import Blog from "./components/Blog";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -23,6 +24,7 @@ function App() {
         <Timeline />
         <Skills />
         <Projects />
+        <Blog />
         <Contact />
       </main>
 

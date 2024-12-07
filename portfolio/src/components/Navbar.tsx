@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -21,17 +21,19 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </motion.div>
 
           <div className="hidden md:flex space-x-8">
-            {['About', 'Timeline', 'Skills', 'Projects', 'Contact'].map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="hover:text-blue-500 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item}
-              </motion.a>
-            ))}
+            {["About", "Timeline", "Skills", "Projects", "Blog", "Contact"].map(
+              (item) => (
+                <motion.a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-blue-500 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item}
+                </motion.a>
+              )
+            )}
           </div>
 
           <button

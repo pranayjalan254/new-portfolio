@@ -1,32 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Globe, Server } from "lucide-react";
-
-const skills = [
-  {
-    category: "Frontend",
-    icon: <Globe className="w-6 h-6" />,
-    items: ["ReactJS", "NextJS", "TypeScript", "Tailwind CSS"],
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    category: "Backend",
-    icon: <Server className="w-6 h-6" />,
-    items: ["Node.js", "Express", "Python", "Solidity"],
-    color: "from-green-500 to-teal-500",
-  },
-  {
-    category: "Database",
-    icon: <Database className="w-6 h-6" />,
-    items: ["MongoDB", "Mongoose", "Firebase"],
-    color: "from-yellow-500 to-orange-500",
-  },
-  {
-    category: "Tools",
-    icon: <Code2 className="w-6 h-6" />,
-    items: ["Github", "Vercel", "GCP"],
-    color: "from-purple-500 to-pink-500",
-  },
-];
+import { skills } from "../data/Skills";
 
 const Skills = () => {
   return (
@@ -58,7 +31,7 @@ const Skills = () => {
                   <div className="bg-black p-6 rounded-2xl h-full">
                     <div className="flex items-center gap-4 mb-4">
                       <div className={`text-gradient-${skill.color}`}>
-                        {skill.icon}
+                        <skill.icon className="w-6 h-6" />
                       </div>
                       <h3 className="text-xl font-bold">{skill.category}</h3>
                     </div>
