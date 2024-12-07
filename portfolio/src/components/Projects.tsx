@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import { projects } from "../data/projects";
+import { projects } from "../data/Projects";
 const categories = [
   "Blockchain",
   "Frontend",
