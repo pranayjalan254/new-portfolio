@@ -19,6 +19,7 @@
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
     "react-toastify": "^10.0.6",
     "three": "^0.161.0",
     "typed.js": "^2.1.0"

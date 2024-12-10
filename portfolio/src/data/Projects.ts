@@ -33,7 +33,7 @@ export const projects = [
     description:
       "A web application that estimates the area of a wound using image processing techniques.",
     video: "/wound-area.mp4",
-    category: ["Fullstack"],
+    category: ["Fullstack", "Machine Learning"],
     github: "https://github.com/pranayjalan254/wound-sensor",
     demo: "https://wound-sensor.vercel.app/",
     tech: ["React", "Flask", "Python", "Google Cloud"],

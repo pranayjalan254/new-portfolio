@@ -47,11 +47,10 @@ const About = () => {
               <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-gray-800/50">
                 <p className="text-xl text-gray-300 leading-relaxed mb-6">
                   Hi, I’m Pranay Jalan, a blockchain developer with a passion
-                  for decentralized technology and cryptography. I'm member of
-                  Superteam India and building DocVault on Solana with a $2000
-                  grant and contribute to the BITS Blockchain Club through
-                  hackathons, workshops, and projects. I’m also exploring
-                  zero-knowledge proofs for secure systems.
+                  for decentralized technology and cryptography. I'm the member
+                  of Superteam India and building DocVault on Solana with a
+                  $2000 grant. I also contribute to the BITS Blockchain Club
+                  through hackathons, workshops, and projects.
                 </p>
                 <p className="text-xl text-gray-300 leading-relaxed">
                   Beyond blockchain, I enjoy working on IoT projects, combining

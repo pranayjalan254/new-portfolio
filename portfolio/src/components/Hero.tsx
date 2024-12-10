@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import { LuLinkedin } from "react-icons/lu";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
 import Typed from "typed.js";
 
 const Hero = () => {
@@ -9,15 +12,14 @@ const Hero = () => {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Full Stack Developer",
-        "Blockchain Enthusiast",
-        "Student at BITS Pilani",
-        "Solana Builder",
-        "Member of Superteam India",
-        "BITS Blockchain Club Member",
+        "a Full Stack Developer",
+        "a Web3 Content Writer ",
+        "a Student at BITS Pilani",
+        "the Member of Superteam India",
+        "the Partnerships Lead at BITS Blockchain Club",
       ],
-      typeSpeed: 35,
-      backSpeed: 20,
+      typeSpeed: 30,
+      backSpeed: 15,
       backDelay: 1000,
       loop: true,
     });
@@ -56,7 +58,7 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-400 h-[40px]"
           >
-            I'm a <span ref={typedRef}></span>
+            I'm <span ref={typedRef}></span>
           </motion.div>
 
           <motion.div
@@ -68,15 +70,15 @@ const Hero = () => {
             <div className="flex gap-6 mb-4">
               {[
                 {
-                  icon: <Github size={24} />,
+                  icon: <FiGithub size={24} />,
                   href: "https://github.com/pranayjalan254",
                 },
                 {
-                  icon: <Twitter size={24} />,
+                  icon: <FaXTwitter size={24} />,
                   href: "https://x.com/pranaytwts",
                 },
                 {
-                  icon: <Linkedin size={24} />,
+                  icon: <LuLinkedin size={24} />,
                   href: "https://www.linkedin.com/in/pranay-jalan254",
                 },
               ].map((social, index) => (
