@@ -5,8 +5,8 @@ export const projects = [
       "A decentralized credential issuance platform that allows institutions to issue and verify credentials on the blockchain.",
     category: ["Blockchain", "Fullstack"],
     video: "/doc-vault.mp4",
-    github: "https://github.com/pranayjalan254/docVault",
-    demo: "https://doc-vault.vercel.app/",
+    github: "https://github.com/pranayjalan254/docvault-solana",
+    demo: "https://docvault-solana.vercel.app/",
     tech: ["ReactJS", "Solidity", "Firebase", "Blockchain"],
   },
   {
