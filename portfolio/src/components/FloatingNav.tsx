@@ -22,7 +22,7 @@ const FloatingNav: React.FC<FloatingNavProps> = ({ isMenuOpen }) => {
                 "Timeline",
                 "Skills",
                 "Projects",
-                "Blog",
+                "Blogs",
                 "Contact",
               ].map((item) => (
                 <motion.a

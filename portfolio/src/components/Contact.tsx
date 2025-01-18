@@ -62,11 +62,12 @@ const Contact = () => {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Information Section */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="hidden md:block space-y-8"
           >
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
 
@@ -115,11 +116,12 @@ const Contact = () => {
             ))}
           </motion.div>
 
+          {/* Send Email Message Section */}
           <motion.form
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 w-full"
             onSubmit={handleSubmit}
           >
             <div>

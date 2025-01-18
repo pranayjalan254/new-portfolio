@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-black">
+    <section id="about" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,25 +34,28 @@ const About = () => {
           viewport={{ once: false }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-16 text-center">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">
+            About Me
+          </h2>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Section */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-[100px] opacity-10" />
-              <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-gray-800/50">
-                <p className="text-xl text-gray-300 leading-relaxed mb-6">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-[80px] opacity-10" />
+              <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-3xl border border-gray-800/50">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4">
                   Hi, I’m Pranay Jalan, a blockchain developer with a passion
                   for decentralized technology and cryptography. I'm the member
                   of Superteam India and building DocVault on Solana with a
                   $2000 grant. I also contribute to the BITS Blockchain Club
                   through hackathons, workshops, and projects.
                 </p>
-                <p className="text-xl text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                   Beyond blockchain, I enjoy working on IoT projects, combining
                   hardware and software to create impactful solutions. In my
                   free time, I love playing table tennis or brainstorming new
@@ -61,7 +64,8 @@ const About = () => {
               </div>
             </motion.div>
 
-            <div className="space-y-6">
+            {/* Right Section: Cards */}
+            <div className="space-y-6 hidden sm:block">
               {cards.map((card, index) => (
                 <motion.div
                   key={index}
@@ -76,10 +80,12 @@ const About = () => {
                     <div className="flex items-center gap-4">
                       <div className="text-white">{card.icon}</div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-2">
                           {card.title}
                         </h3>
-                        <p className="text-gray-400">{card.description}</p>
+                        <p className="text-sm sm:text-base text-gray-400">
+                          {card.description}
+                        </p>
                       </div>
                     </div>
                   </div>
