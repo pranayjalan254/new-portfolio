@@ -21,19 +21,24 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </motion.div>
 
           <div className="hidden md:flex space-x-8">
-            {["About", "Timeline", "Skills", "Projects", "Blog", "Contact"].map(
-              (item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-blue-500 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {item}
-                </motion.a>
-              )
-            )}
+            {[
+              "About",
+              "Timeline",
+              "Skills",
+              "Projects",
+              "Blogs",
+              "Contact",
+            ].map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="hover:text-blue-500 transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
 
           <button

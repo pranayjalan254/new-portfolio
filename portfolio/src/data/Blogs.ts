@@ -1,5 +1,25 @@
 export const blogs = [
   {
+    title: "I can NFT, So Can You!",
+    description:
+      "A step-by-step guide on NFT Standards, Types, and how to create NFTs on Solana.",
+    date: "January 18, 2025",
+    readTime: "7 min read",
+    link: "https://medium.com/@pranayjalan.work/i-can-nft-so-can-you-latest-guide-on-nft-standards-and-creation-4f8429eaa837",
+    image: "/nft.png",
+    tags: ["Web3", "NFTs", "Solana", "Metaplex"],
+  },
+  {
+    title: "All about ERC-7683",
+    description:
+      "Dive in to see how Okto is reshaping cross-chain interactions and building the future of a seamless Web3 and why ERC-7863 matters !!",
+    date: "January 17, 2025",
+    readTime: "4 min read",
+    link: "https://x.com/pranaytwts/status/1880242151013118202",
+    image: "/erc7683.jpg",
+    tags: ["Web3", "Crosschain Interactions", "ERC-7683", "Fillers"],
+  },
+  {
     title: "Memecoins: The Next Big Thing in Crypto",
     description:
       "Dive deep into the history and future of memecoins, the latest trend in the crypto world.",

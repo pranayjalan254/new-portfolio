@@ -41,13 +41,13 @@ const Blog = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000000);
+    const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, [currentIndex]);
 
   return (
     <section
-      id="blog"
+      id="blogs"
       className="py-20 bg-gradient-to-b from-black via-gray-900 to-black"
     >
       <div className="container mx-auto px-4">

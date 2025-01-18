@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-black via-gray-900 to-black"
+      className="mx-20 py-20 bg-gradient-to-b from-black via-gray-900 to-black"
     >
       <div className="container mx-auto px-4">
         <motion.h2

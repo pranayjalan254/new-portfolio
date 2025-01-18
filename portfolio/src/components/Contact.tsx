@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
-  const COOLDOWN_TIME = 60000; // 1 minute cooldown
+  const COOLDOWN_TIME = 60000;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

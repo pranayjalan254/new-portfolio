@@ -1,13 +1,12 @@
 export const projects = [
   {
-    title: "DocVault",
-    description:
-      "A decentralized credential issuance platform that allows institutions to issue and verify credentials on the blockchain.",
-    category: ["Blockchain", "Fullstack"],
+    title: "DocVault 2.0",
+    description: "A decentralized credential management platform on Solana.",
+    category: ["Blockchain", "Fullstack", "Frontend"],
     video: "/doc-vault.mp4",
     github: "https://github.com/pranayjalan254/docvault-solana",
-    demo: "https://docvault-solana.vercel.app/",
-    tech: ["ReactJS", "Solidity", "Firebase", "Blockchain"],
+    demo: "https://www.docvault.website/",
+    tech: ["ReactJS", "Solana", "MongoDB", "Blockchain"],
   },
   {
     title: "TokenTrackr",
@@ -26,7 +25,16 @@ export const projects = [
     category: ["Blockchain", "Frontend"],
     github: "https://github.com/pranayjalan254/spotlight",
     demo: "https://spotlight-nft.vercel.app/",
-    tech: ["ReactJS", "Typescript", "Blockchain"],
+    tech: ["NextJS", "Typescript", "Blockchain"],
+  },
+  {
+    title: "ModelX",
+    description: "A landing page for a decentralized AI model marketplace.",
+    video: "/modelx.mp4",
+    category: ["Blockchain", "Frontend"],
+    github: "https://github.com/pranayjalan254/modelX",
+    demo: "https://modelx.vercel.app/",
+    tech: ["NextJS", "Typescript", "Blockchain"],
   },
   {
     title: "Wound Area Estimator",

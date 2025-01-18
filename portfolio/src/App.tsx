@@ -30,7 +30,7 @@ function App() {
 
       <footer className="py-8 mt-20 border-t border-gray-800">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <p>© 2024 Pranay Jalan. All rights reserved.</p>
+          <p>© 2025 Pranay Jalan. All rights reserved.</p>
           <div className="flex gap-4">
             <a
               href="https://github.com/your-github"
