@@ -46,16 +46,13 @@ const Blog = () => {
   }, [currentIndex]);
 
   return (
-    <section
-      id="blogs"
-      className="py-20 bg-gradient-to-b from-black via-gray-900 to-black"
-    >
+    <section id="blogs" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
+          className="text-4xl font-bold mb-16 text-center"
         >
           Blogs
         </motion.h2>
@@ -63,9 +60,9 @@ const Blog = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="overflow-hidden">
             <motion.div
-              className="flex gap-4 md:gap-6"
+              className="flex gap-6"
               style={{
-                transform: `translateX(-${currentIndex * (slideWidth + 16)}px)`,
+                transform: `translateX(-${currentIndex * (slideWidth + 24)}px)`,
                 transition: "transform 0.5s ease-in-out",
               }}
             >
@@ -73,52 +70,58 @@ const Blog = () => {
                 <motion.div
                   key={index}
                   style={{ width: slideWidth }}
-                  className="flex-shrink-0 bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden"
-                  whileHover={{ scale: 1.02 }}
+                  className="flex-shrink-0"
                 >
-                  <div className="relative h-40 md:h-48">
-                    <img
-                      src={blog.image}
-                      alt={blog.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-2 text-xs md:text-sm text-gray-300 mb-2">
-                        <span>{blog.date}</span>
-                        <span>•</span>
-                        <span>{blog.readTime}</span>
-                      </div>
-                      <h3 className="text-base md:text-lg font-bold line-clamp-2">
-                        {blog.title}
-                      </h3>
-                    </div>
-                  </div>
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-[1px] rounded-2xl h-full">
+                    <div className="bg-black rounded-2xl h-full overflow-hidden">
+                      <div className="relative h-48">
+                        <img
+                          src={blog.image}
+                          alt={blog.title}
+                          className="w-full h-full object-cover"
+                        />
 
-                  <div className="p-4">
-                    <p className="text-xs md:text-sm text-gray-400 line-clamp-2 mb-4">
-                      {blog.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {blog.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full text-xs text-gray-300"
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                        <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 text-sm text-gray-300/90">
+                          <span>{blog.date}</span>
+                          <span className="text-gray-400/80">•</span>
+                          <span>{blog.readTime}</span>
+                        </div>
+                      </div>
+
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-3 line-clamp-2">
+                          {blog.title}
+                        </h3>
+
+                        <p className="text-sm text-gray-400 line-clamp-2 mb-4">
+                          {blog.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {blog.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full text-xs text-gray-300"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <motion.a
+                          href={blog.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors group"
+                          whileHover={{ x: 5 }}
                         >
-                          {tag}
-                        </span>
-                      ))}
+                          Read More
+                          <ExternalLink className="w-4 h-4 group-hover:stroke-blue-500 transition-colors" />
+                        </motion.a>
+                      </div>
                     </div>
-                    <motion.a
-                      href={blog.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-xs md:text-sm text-blue-500 hover:text-blue-400 transition-colors"
-                      whileHover={{ x: 5 }}
-                    >
-                      Read More{" "}
-                      <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
-                    </motion.a>
                   </div>
                 </motion.div>
               ))}
@@ -126,35 +129,35 @@ const Blog = () => {
           </div>
 
           {/* Navigation buttons */}
-          <div className="absolute top-1/2 -translate-y-1/2 -left-6 -right-6 md:-left-8 md:-right-8 flex justify-between pointer-events-none">
+          <div className="absolute top-1/2 -translate-y-1/2 -left-4 -right-4 flex justify-between pointer-events-none">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prevSlide}
-              className="p-1.5 md:p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors pointer-events-auto"
+              className="p-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm hover:from-blue-500/20 hover:to-purple-500/20 transition-colors pointer-events-auto"
             >
-              <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
+              <ChevronLeft className="w-6 h-6" />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={nextSlide}
-              className="p-1.5 md:p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors pointer-events-auto"
+              className="p-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm hover:from-blue-500/20 hover:to-purple-500/20 transition-colors pointer-events-auto"
             >
-              <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
+              <ChevronRight className="w-6 h-6" />
             </motion.button>
           </div>
 
           {/* Dots indicator */}
-          <div className="flex justify-center gap-1.5 mt-4 md:mt-6">
+          <div className="flex justify-center gap-2 mt-8">
             {[...Array(maxIndex + 1)].map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-gradient-to-r from-blue-500 to-purple-500 w-3 md:w-4"
-                    : "bg-gray-600"
+                    ? "w-8 bg-gradient-to-r from-blue-500 to-purple-500"
+                    : "w-2 bg-gray-700"
                 }`}
               />
             ))}

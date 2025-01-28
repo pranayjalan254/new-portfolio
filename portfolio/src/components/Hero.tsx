@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen relative flex items-center justify-center bg-black">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(29,78,216,0.15),transparent_80%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0, 98, 255, 0.1),transparent_80%)]" />
       </div>
 
       <div className="container mx-auto px-4 z-10 text-center max-w-3xl">
@@ -88,7 +88,7 @@ const Hero = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  className="p-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full hover:from-blue-500/20 hover:to-purple-500/20 text-gray-300 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -97,11 +97,11 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Buttons */}
+            {/* Updated Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-3 text-sm sm:text-base rounded-full inline-block transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 Get in touch
               </a>
@@ -109,7 +109,7 @@ const Hero = () => {
               <a
                 href="https://drive.google.com/drive/folders/1gJ5ML0m9u1E6YjqBZZc3e6PKeZnSqm51?usp=sharing"
                 target="_blank"
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Download size={16} />
                 View My Resume

@@ -48,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-black">
       <ToastContainer position="bottom-right" theme="dark" autoClose={3000} />
 
       <div className="container mx-auto px-4">
@@ -99,7 +99,9 @@ const Contact = () => {
               },
             ].map((item, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <div className="text-blue-500">{item.icon}</div>
+                <div className="p-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full">
+                  {item.icon}
+                </div>
                 {item.link ? (
                   <a
                     href={item.link}
@@ -124,51 +126,36 @@ const Contact = () => {
             className="space-y-6 w-full"
             onSubmit={handleSubmit}
           >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-400 mb-2"
-              >
-                Name
-              </label>
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-[1px] rounded-xl">
               <input
                 type="text"
                 id="name"
                 name="user_name"
                 required
-                className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-3 bg-black rounded-xl focus:outline-none"
+                placeholder="Your Name"
               />
             </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-400 mb-2"
-              >
-                Email
-              </label>
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-[1px] rounded-xl">
               <input
                 type="email"
                 id="email"
                 name="user_email"
                 required
-                className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-3 bg-black rounded-xl focus:outline-none"
+                placeholder="Your Email"
               />
             </div>
 
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-400 mb-2"
-              >
-                Message
-              </label>
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-[1px] rounded-xl">
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 required
-                className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-3 bg-black rounded-xl focus:outline-none"
+                placeholder="Your Message"
               ></textarea>
             </div>
 
@@ -177,7 +164,7 @@ const Contact = () => {
               whileTap={{ scale: 0.95 }}
               type="submit"
               disabled={isSubmitting}
-              className={`w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-colors ${
+              className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-xl transition-all ${
                 isSubmitting ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
