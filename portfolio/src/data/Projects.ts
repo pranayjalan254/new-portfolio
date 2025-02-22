@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: "Vault AI",
+    description:
+      "A DeFI AI Agent for managing assets and predicting market trends. Won the Coinbase's Agentic Kit Prize Pool",
+    category: ["Blockchain", "Fullstack"],
+    logoUrl: "/logos/vaultai.png",
+    video: "",
+    github: "https://github.com/pranayjalan254/vault-ai",
+    demo: "",
+    tech: ["NextJS", "Ethereum", "Postgres", "Blockchain"],
+  },
+  {
     title: "TrueScore",
     description:
       "A decentralized review system and AI powered Survey Platform on Aptos",

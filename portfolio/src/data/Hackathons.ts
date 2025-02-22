@@ -1,6 +1,13 @@
 export const hackathons = [
   {
     year: "January 2025",
+    title: "Agentic Ethereum",
+    event: "Online",
+    description:
+      "Developed VaultAI: A DeFI AI Agent for managing assets and predicting market trends. Won the Coinbase's Agentic Kit Prize Pool",
+  },
+  {
+    year: "January 2025",
     title: "LNMHacks 7.0",
     event: "Offline (Jaipur)",
     description:
