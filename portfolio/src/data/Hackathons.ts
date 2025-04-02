@@ -11,7 +11,7 @@ export const hackathons = [
     title: "LNMHacks 7.0",
     event: "Offline (Jaipur)",
     description:
-      "Developed TrueScore: A decentralized review system and AI powered Survey Platform on Aptos.",
+      "Developed TrueScore: A decentralized review system and AI powered Survey Platform on Aptos. Won Aptos Track and 100,000 INR.",
   },
   {
     year: "September 2024",

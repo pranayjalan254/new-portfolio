@@ -2,7 +2,6 @@ import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -20,7 +19,6 @@ function App() {
 
       <main className="container mx-auto px-4">
         <Hero />
-        <About />
         <Timeline />
         <Skills />
         <Projects />
@@ -33,19 +31,19 @@ function App() {
           <p>© 2025 Pranay Jalan. All rights reserved.</p>
           <div className="flex gap-4">
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/pranayjalan254"
               className="hover:text-blue-500 transition-colors"
             >
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://www.linkedin.com/in/pranay-jalan254"
               className="hover:text-blue-500 transition-colors"
             >
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:pranayjalan.work@gmail.com"
               className="hover:text-blue-500 transition-colors"
             >
               <Mail size={24} />
